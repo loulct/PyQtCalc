@@ -1,9 +1,7 @@
-[tool.poetry]
+[project]
 name = "Calc"
 version = "0.0.1"
-authors = ["loulct"]
 description = "Calculator Widget"
-
-[tool.poetry.dependencies]
-python = ">=3.9"
-PyQt6 = "^6.9.1"
+authors = [{ name = "loulct" }]
+requires-python = ">=3.14"
+dependencies = ["PyQt6>=6.9.1,<7"]

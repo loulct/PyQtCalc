@@ -1,2 +1,6 @@
 **/__pycache__
 *.log
+.venv
+.python-version
+uv.lock
+.ruff_cache
