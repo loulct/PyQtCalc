@@ -14,17 +14,17 @@ from src.const import Buttons, Global, History, WindowSettings
 
 
 class HistoryWindow(QWidget):
-    """_summary_
+    """History window class.
 
     Args:
-        QWidget (_type_): _description_
+        QWidget (class): Qt Widget class.
     """
 
     def __init__(self, parent, title: str):
-        """_summary_
+        """__init__
 
         Args:
-            title (str): _description_
+            title (str): Window title.
         """
         super().__init__()
         self._parent = parent
@@ -53,13 +53,13 @@ class HistoryWindow(QWidget):
         self.shortcut_quit.activated.connect(self._parent.quit_app)
 
     def show_history(self):
-        """_summary_"""
+        """Toggle history."""
         if self.shortcut_history.isEnabled():
             self._parent.history_button.setChecked(False)
         self._parent.show_history()
 
     def update_history(self):
-        """_summary_"""
+        """Updates calculation history"""
         calc = QLabel(self._parent.history[-1][History.CALC_KEY])
 
         result = QLabel(self._parent.history[-1][History.RESULT_KEY])

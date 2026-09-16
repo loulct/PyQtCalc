@@ -5,19 +5,19 @@ from src.const import Buttons
 
 
 class Button(QPushButton):
-    """_summary_
+    """Custom generic button class.
 
     Args:
-        QPushButton (_type_): _description_
+        QPushButton (class): Qt Button.
     """
 
     def __init__(self, parent, text: str, color: str | None = None):
-        """_summary_
+        """__init__
 
         Args:
-            parent (CalcApp): _description_
-            text (str): _description_
-            color (str | None, optional): _description_. Defaults to None.
+            parent (CalcApp): Parent app/window.
+            text (str): Label of button.
+            color (str | None, optional): Color of label content. Defaults to None.
         """
         super().__init__(text=text)
         self._parent = parent
@@ -31,7 +31,7 @@ class Button(QPushButton):
             self._shortcut.activated.connect(self.button_clicked)
 
     def button_clicked(self) -> None:
-        """_summary_"""
+        """If button is clicked: inputs content of button's label inside the eval."""
         if self._parent.has_result:
             self._parent.tmp_input = ""
             self._parent.calc_label.setText(self._parent.tmp_input)

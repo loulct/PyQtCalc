@@ -2,14 +2,14 @@ from src.buttons.button import Button
 
 
 class ResetButton(Button):
-    """_summary_
+    """Child of Button that resets inputs.
 
     Args:
-        Button (_type_): _description_
+        Button (class): Custom generic button class
     """
 
     def button_clicked(self) -> None:
-        """_summary_"""
+        """If button is clicked: triggers reset action."""
         self._parent.input = ""
         self._parent.label.setText(self._parent.input)
         self._parent.tmp_input = ""

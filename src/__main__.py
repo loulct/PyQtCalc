@@ -26,19 +26,19 @@ from src.history.history import HistoryWindow
 
 
 class CalcApp(QMainWindow):
-    """_summary_
+    """Calculator app main window class.
 
     Args:
-        BaseMenuMainWindow (_type_): _description_
+        QMainWindow (class): Qt Main window class.
     """
 
     def __init__(self, parent_app: QApplication, logger: Logger, title: str):
-        """_summary_
+        """__init__
 
         Args:
-            parent_app (QApplication): _description_
-            logger (Logger): _description_
-            title (str): _description_
+            parent_app (QApplication): Parent application.
+            logger (Logger): Instance of Logger.
+            title (str): App title.
         """
         super().__init__()
 
@@ -128,25 +128,25 @@ class CalcApp(QMainWindow):
         self.show()
 
     def show_history(self) -> None:
-        """_summary_"""
+        """Toggle history window."""
         if self.history_window.isVisible():
             self.history_window.hide()
         else:
             self.history_window.show()
 
     def closeEvent(self, a0) -> None:
-        """_summary_
+        """Triggers when event of type closing is called.
 
         Args:
-            a0 (QCloseEvent): _description_
+            a0 (QCloseEvent): Qt event.
         """
         self.quit_app()
 
     def quit_app(self) -> None:
-        """_summary_
+        """End process.
 
         Args:
-            a0 (QCloseEvent): _description_
+            a0 (QCloseEvent): Qt event.
         """
         self.parent_app.quit()
 

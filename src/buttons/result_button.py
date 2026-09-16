@@ -5,10 +5,10 @@ from src.const import History, ResultValues
 
 
 class ResultButton(Button):
-    """_summary_
+    """Child of Button that triggers calculation.
 
     Args:
-        Button (_type_): _description_
+        Button (class): Custom generic button class
     """
 
     def __init__(self, parent, text: str, color: str | None = None):

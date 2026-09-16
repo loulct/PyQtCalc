@@ -4,10 +4,10 @@ from src.buttons.button import Button
 
 
 class DeleteButton(Button):
-    """_summary_
+    """Child of Button that remove latest appended input.
 
     Args:
-        Button (_type_): _description_
+        Button (_type_): Custom generic button class.
     """
 
     def __init__(self, parent, text: str, color: str | None = None):
@@ -18,6 +18,6 @@ class DeleteButton(Button):
         self.back_shortcut.activated.connect(self.button_clicked)
 
     def button_clicked(self) -> None:
-        """_summary_"""
+        """If button is clicked: remove latest input."""
         self._parent.input = self._parent.input[:-1]
         self._parent.label.setText(self._parent.input)
