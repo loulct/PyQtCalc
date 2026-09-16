@@ -1,10 +1,32 @@
-# QtCalc
+# PyQtCalc
 
-uv run .\__main__.py 
+## Releases
 
-## TODO
+- [0.1.0](https://github.com/loulct/PyQtCalc/releases/tag/0.1.0)
 
-- replace eval() or at least secure it (overflowing error)
-- add scientific options
-- add buttons for operations like power instead of using 2 multiply
-- add a graph/plotting options for equation, integral, etc. in the spirit of mathlab
+## Install Dependencies
+
+Install [uv](https://docs.astral.sh/uv/#installation).
+
+Then run the command below to read the lockfile, create the virtual environment and install required dependencies.
+```
+uv sync
+```
+
+Run program using the command below.
+```
+uv run python -m src
+```
+
+## Build
+
+```
+./build.sh
+```
+
+## Keymap
+
+| Key | Action |
+| --- | --- |
+| Ctrl+Q | Quit |
+| Ctrl+H | Open/Close History |
