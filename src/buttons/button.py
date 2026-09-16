@@ -1,7 +1,7 @@
-from PyQt6.QtWidgets import QPushButton
 from PyQt6.QtGui import QKeySequence, QShortcut
+from PyQt6.QtWidgets import QPushButton
 
-from const import Buttons
+from src.const import Buttons
 
 
 class Button(QPushButton):

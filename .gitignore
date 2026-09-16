@@ -1,6 +1,18 @@
-**/__pycache__
+# Python
+__pycache__/
+
+# app
 *.log
-.venv
-.python-version
-uv.lock
+
+# uv
+.venv/
+
+# tools
 .ruff_cache
+.ropeproject/
+
+# build
+*.egg-info/
+dist/
+build/
+*.spec

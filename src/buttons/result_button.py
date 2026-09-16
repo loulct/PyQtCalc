@@ -1,7 +1,7 @@
-from buttons.button import Button
 from PyQt6.QtGui import QKeySequence, QShortcut
 
-from const import ResultValues, History
+from src.buttons.button import Button
+from src.const import History, ResultValues
 
 
 class ResultButton(Button):
@@ -11,9 +11,11 @@ class ResultButton(Button):
         Button (_type_): _description_
     """
 
-    def __init__(self, parent, text: str, color: str | None= None):
+    def __init__(self, parent, text: str, color: str | None = None):
         super().__init__(parent, text, color)
-        self._shortcut = QShortcut(QKeySequence.StandardKey.InsertParagraphSeparator, self)
+        self._shortcut = QShortcut(
+            QKeySequence.StandardKey.InsertParagraphSeparator, self
+        )
         self._shortcut.activated.connect(self.button_clicked)
 
     def button_clicked(self) -> None:

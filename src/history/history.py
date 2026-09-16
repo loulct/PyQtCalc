@@ -1,16 +1,16 @@
-from PyQt6.QtWidgets import (
-    QWidget,
-    QVBoxLayout,
-    QLabel,
-    QFrame,
-    QScrollArea,
-    QFormLayout,
-    QGroupBox,
-)
-from PyQt6.QtGui import QKeySequence, QShortcut
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QKeySequence, QShortcut
+from PyQt6.QtWidgets import (
+    QFormLayout,
+    QFrame,
+    QGroupBox,
+    QLabel,
+    QScrollArea,
+    QVBoxLayout,
+    QWidget,
+)
 
-from const import WindowSettings, History, Buttons, Global
+from src.const import Buttons, Global, History, WindowSettings
 
 
 class HistoryWindow(QWidget):

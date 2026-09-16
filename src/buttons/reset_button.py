@@ -1,4 +1,4 @@
-from buttons.button import Button
+from src.buttons.button import Button
 
 
 class ResetButton(Button):

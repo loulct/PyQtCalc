@@ -1,5 +1,6 @@
-from buttons.button import Button
 from PyQt6.QtGui import QKeySequence, QShortcut
+
+from src.buttons.button import Button
 
 
 class DeleteButton(Button):

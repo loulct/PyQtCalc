@@ -1,29 +1,28 @@
 """Main python file of Calc module."""
 
-from PyQt6.QtWidgets import (
-    QApplication,
-    QMainWindow,
-    QHBoxLayout,
-    QWidget,
-    QVBoxLayout,
-    QLabel,
-    QMenuBar,
-    QMenu,
-)
+from logging import INFO, Logger, basicConfig, getLogger
+from sys import argv
+
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QAction, QKeySequence
-from sys import argv
-from logging import Logger, getLogger, basicConfig, INFO
+from PyQt6.QtWidgets import (
+    QApplication,
+    QHBoxLayout,
+    QLabel,
+    QMainWindow,
+    QMenu,
+    QMenuBar,
+    QVBoxLayout,
+    QWidget,
+)
 
-from buttons.button import Button
-from buttons.delete_button import DeleteButton
-from buttons.operation_button import OperationButton
-from buttons.reset_button import ResetButton
-from buttons.result_button import ResultButton
-
-from history.history import HistoryWindow
-
-from const import Global, Colors, Numbers, Buttons, History
+from src.buttons.button import Button
+from src.buttons.delete_button import DeleteButton
+from src.buttons.operation_button import OperationButton
+from src.buttons.reset_button import ResetButton
+from src.buttons.result_button import ResultButton
+from src.const import Buttons, Colors, Global, History, Numbers
+from src.history.history import HistoryWindow
 
 
 class CalcApp(QMainWindow):
@@ -50,7 +49,9 @@ class CalcApp(QMainWindow):
         self.parent_app = parent_app
 
         self.menu: QMenuBar | None = self.menuBar()
-        self.file_menu: QMenu | None = self.menu.addMenu(Global.MENU_TITLE) if self.menu else None
+        self.file_menu: QMenu | None = (
+            self.menu.addMenu(Global.MENU_TITLE) if self.menu else None
+        )
         self.quit_button = QAction(Global.QUIT_LABEL, self)
         self.file_menu.addAction(self.quit_button) if self.file_menu else None
 
