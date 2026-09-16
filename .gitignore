@@ -18,3 +18,4 @@ build/
 *.spec
 *.AppImage
 *.svg
+AppDir/
