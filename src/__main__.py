@@ -125,6 +125,8 @@ class CalcApp(QMainWindow):
         self.history_window = HistoryWindow(self, History.HISTORY_LABEL)
 
         self.setCentralWidget(container)
+        self.adjustSize()
+        self.setFixedSize(self.minimumSizeHint())
         self.show()
 
     def show_history(self) -> None:
